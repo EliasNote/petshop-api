@@ -18,7 +18,14 @@ public class Pet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
-    private String raca;
-    private String contato;
+
+    @Column(name = "name", unique = true, nullable = false, length = 50)
+    private String name;
+
+    @Column(name = "breed", nullable = false, length = 50)
+    private String breed;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
