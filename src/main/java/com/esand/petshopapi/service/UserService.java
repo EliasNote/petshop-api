@@ -1,6 +1,5 @@
 package com.esand.petshopapi.service;
 
-import com.esand.petshopapi.dto.UserResponseDto;
 import com.esand.petshopapi.entity.User;
 import com.esand.petshopapi.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

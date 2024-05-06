@@ -11,16 +11,20 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PetCreateDto {
+public class UserCreateDto {
     @NotBlank
-    @Size(min = 1, max = 50)
+    @Size(min = 1, max = 100)
     private String name;
 
     @NotBlank
-    @Size(max = 50)
-    private String breed;
+    @Size(min = 11, max = 11)
+    private String cpf;
 
     @NotBlank
     @Size(min = 11, max = 11)
-    private String ownerCpf;
+    private String contact;
+
+    @NotBlank
+    @Size(min = 8, max = 8)
+    private String cep;
 }

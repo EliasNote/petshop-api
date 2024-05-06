@@ -1,5 +1,6 @@
 package com.esand.petshopapi.entity;
 
+import com.esand.petshopapi.client.viacep.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +29,9 @@ public class User implements Serializable {
 
     @Column(name = "contact", nullable = false, length = 11)
     private String contact;
+
+    @Embedded
+    private Endereco endereco;
 
     @OneToMany(mappedBy = "user")
     private List<Pet> petList;
